@@ -13,10 +13,13 @@ from trdg.generators import (
 )
 
 # The generators use the same arguments as the CLI, only as parameters
-generator = GeneratorFromStrings(
-    ['Test1', 'Test2', 'Test3'],
-    blur=2,
-    random_blur=True
+generator = GeneratorFromDict(
+    count=4,
+    language="da",
 )
 
+
+
 for img, lbl in generator:
+    img.show()
+    print(lbl)
